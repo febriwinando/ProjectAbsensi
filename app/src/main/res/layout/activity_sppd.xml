@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dinasluar.PerjalananDinas.SppdActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/titleHeaderPd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="backPd"
+                android:focusable="true">
+
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:textSize="18dp"
+                android:elevation="10dp"
+                android:outlineAmbientShadowColor="@color/fontbold"
+                android:outlineSpotShadowColor="@color/fontbold"
+                android:text="PERJALANAN DINAS"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_alignParentRight="true"
+                android:onClick="nextKegiatanPd"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_forward" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_below="@+id/titleHeaderPd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvKegiatanPd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_row_kegiatan" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvlistCheckedPd"
+                    android:textSize="14sp"
+
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:textColor="@color/fontbold"
+                    android:background="@color/kuning_2"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Kegiatan Lainnya: (Opsional) "
+                    android:textColor="@color/font"
+                    android:textSize="16sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/etKegiatanPdLainmya"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/backgroundwhiteradius"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:padding="15dp"
+                    android:pointerIcon="grab"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat"
+                    android:textSize="14sp"
+
+                    android:capitalize="sentences"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="go.pemkott.appsandroidmobiletebingtinggi.ui.dashboard.DashbooardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_rekap"
+        android:name="go.pemkott.appsandroidmobiletebingtinggi.ui.rekap.RekapFragment"
+        android:label="@string/title_rekap"
+        tools:layout="@layout/fragment_rekap" />
+
+    <fragment
+        android:id="@+id/navigation_jadwal"
+        android:name="go.pemkott.appsandroidmobiletebingtinggi.ui.jadwal.JadwalFragment"
+        android:label="@string/title_jadwal"
+        tools:layout="@layout/fragment_jadwal" />
+
+    <fragment
+        android:id="@+id/navigation_profil"
+        android:name="go.pemkott.appsandroidmobiletebingtinggi.ui.profil.ProfilFragment"
+        android:label="@string/title_profil"
+        tools:layout="@layout/fragment_profil" />
+</navigation>

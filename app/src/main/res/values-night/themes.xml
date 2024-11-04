@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppPemko" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/biru_1</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/fontbold</item>
+        <!-- Customize your theme here. -->
+        <item name="color">#fff</item>
+        <item name="android:textColor">@color/putih</item>
+        <item name="colorAccent">@color/biru_1</item>
+        <item name="android:colorBackground">@color/fontbold</item>
+        <item name="android:textColorHint">@color/putih</item>
+
+    </style>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="1dp"
+    tools:showIn="@layout/activity_keperluan_pribadi_final"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            />
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/titleHeaderFinalKp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/backTl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="backFinalDinasLuar"
+                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml"
+                tools:targetApi="m">
+
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:elevation="10dp"
+                    android:outlineAmbientShadowColor="@color/fontbold"
+                    android:outlineSpotShadowColor="@color/fontbold"
+                    app:srcCompat="@drawable/ic_back"
+                    tools:targetApi="p" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title_contentkp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="10dp"
+
+                android:outlineAmbientShadowColor="@color/fontbold"
+                android:outlineSpotShadowColor="@color/fontbold"
+                android:textColor="@color/biru_1"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:visibility="visible"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_search_location"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:onClick="fokusLokasi"
+                android:background="@drawable/backgoundovalkuning"
+                />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:outlineAmbientShadowColor="@color/fontbold"
+            android:outlineSpotShadowColor="@color/fontbold"
+            android:backgroundTint="@color/biru_1"
+            android:id="@+id/upsheet">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/arrow_up_24"
+
+            android:contentDescription="@string/todo" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</LinearLayout>

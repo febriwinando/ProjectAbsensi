@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/backgroundnavbarputih"
+    android:layout_margin="20dp"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/ic_emot_error"
+                android:id="@+id/emoticon"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/emoticon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oops!"
+                    android:textSize="35sp"
+                    android:textColor="@color/kuning_2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gagal mengakses server,"
+                    android:textColor="@color/fontbold"
+
+                    android:textSize="14sp"
+                    android:shadowColor="@color/font"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="periksa jaringan internet anda, \ndan coba kembali."
+                    android:textColor="@color/fontbold"
+                    android:textSize="14sp"
+
+                    android:shadowColor="@color/font"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvTutupDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:text="x"
+                android:clickable="true"
+                android:textColor="@color/fontbold"
+                android:textSize="24sp"
+
+                android:focusable="true" />
+
+        </RelativeLayout>
+</LinearLayout>

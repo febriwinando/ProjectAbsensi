@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.rekap.RekapFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:text="Daftar Presensi"
+                android:textAlignment="center"
+                android:textColor="@color/font"
+                android:textSize="20sp"
+                android:id="@+id/titleHeaderListPresensi"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TableLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:layout_marginBottom="1dp">
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:text="Mulai"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="16sp"
+
+                            />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:text=":"
+
+
+                            android:layout_marginEnd="10dp"
+                            android:textSize="16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner"
+                            android:id="@+id/llMulaiRekap"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="-"
+                                android:textColor="@color/biru_1"
+                                android:textSize="16sp"
+                                android:id="@+id/tvHariMulaiRekap"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="/"
+                                android:textColor="@color/fontbold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="-"
+                                android:textSize="16sp"
+                                android:textColor="@color/fontbold"
+                                android:id="@+id/tvBulanTahunMulaiRekap"/>
+
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sampai"
+                            android:layout_marginEnd="10dp"
+
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+
+                            android:layout_marginEnd="10dp"
+                            android:textSize="16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner"
+                            android:id="@+id/llSampaiRekap"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="-"
+
+                                android:textColor="@color/biru_1"
+                                android:id="@+id/tvHariSampaiRekap"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/"
+
+                                android:textColor="@color/fontbold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="-"
+                                android:textSize="16sp"
+                                android:textColor="@color/fontbold"
+                                android:id="@+id/tvBulanTahunSampaiRekap"/>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tampilkan"
+                    android:textAlignment="center"
+                    android:background="@drawable/backgroundnavbar"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/putih"
+                    android:layout_marginBottom="10dp"
+
+                    android:id="@+id/tvtTampilkanRekap"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRekapServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="42dp"
+                tools:listitem="@layout/item_rekap_server"
+                />
+        </LinearLayout>
+    </LinearLayout>

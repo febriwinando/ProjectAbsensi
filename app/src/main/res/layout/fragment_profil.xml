@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profil.ProfilFragment"
+    android:id="@+id/rlCheck"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="470dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_image_search"
+                    android:id="@+id/addImgProfile"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="250dp"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="20dp"
+                    android:outlineAmbientShadowColor="@color/fontbold"
+                    android:outlineSpotShadowColor="@color/fontbold"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearance="@style/ImageStyleBottom50" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp">
+
+                <TextView
+                    android:id="@+id/tvNamaEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FEBRI WINANDO PURBA, A.Md"
+                    android:textAlignment="center"
+                    android:textColor="@color/biru_1"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/mb"
+                    />
+
+                <TextView
+                    android:id="@+id/tvNipEmploy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="NIP: 19940209 202012 1 005"
+                    android:textAlignment="center"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informasi Pegawai"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:textFontWeight="1000"
+                    android:textColor="@color/font"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvJabatanEmploy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Staf"
+
+
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_jabatan" />
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvKelompokEmploy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Pengatur (II/c)"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font"
+                        android:visibility="gone" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Bidang Aplikasi dan Informatika"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_group_work" />
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font"
+                        android:visibility="gone" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Pengembangan Aplikasi Informatika"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_group_work" />
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvEmailEmploy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="febriwinando@gmail.com"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_mail" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvNoHpEmploye"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="085762183348"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_phone_android" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvDinasEmploy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Jl. M. Akub Hasibuan, Kel. Tanjung Marulak, Kec. Rambutan, Tebing Tinggi"
+                            android:textSize="16sp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_locasi_office" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengaturan Profil"
+                    android:textFontWeight="1000"
+                    android:textColor="@color/font"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:id="@+id/trGantiPassword">
+                        <TextView
+                            android:id="@+id/tvUpdatePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Ganti Password"
+
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_lock" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:id="@+id/trPanduanAplikasi">
+                        <TextView
+                            android:id="@+id/tvPanduanAplikasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+
+                            android:text="Panduan Aplikasi"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_panduan"
+                            app:tint="@color/biru_1" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/font" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+                        <TextView
+                            android:id="@+id/tvPrivasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+
+                            android:text="Privasi"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_privasi" />
+                    </TableRow>
+
+
+                </TableLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivKeluarProfile"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="110dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_power_off"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/backHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true">
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_back" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".jadwalsift.JadwalSiftActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleHeaderPd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/ivBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_back"
+                android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:id="@+id/llPilihBulan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/titleCalendarSift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:outlineAmbientShadowColor="@color/fontbold"
+                android:outlineSpotShadowColor="@color/fontbold"
+                android:text="@string/jadwal_sift"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_arrow_down"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/ic_unduh"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/todo"
+            android:id="@+id/ivUnduhJadwalSift"/>
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_sync2"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/todo"
+            android:id="@+id/ivSyncJadwalSift"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerJadwalSift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_base_color="#CACACA"
+        app:shimmer_colored="true"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJadwalSifting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_grid_jadwal"
+                android:padding="5dp"
+                />
+
+
+        <LinearLayout
+            android:layout_below="@+id/rvJadwalSifting"
+            android:id="@+id/tvNb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/p_pagi"
+
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/s_sore"
+
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/m_malam"
+
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+        </ScrollView>
+
+</com.facebook.shimmer.ShimmerFrameLayout>
+
+</LinearLayout>

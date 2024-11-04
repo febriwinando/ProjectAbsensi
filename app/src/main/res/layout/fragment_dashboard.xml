@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashbooardFragment"
+    android:orientation="vertical">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_base_color="#CACACA"
+            app:shimmer_colored="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rrHeader"
+                    android:background="@drawable/gradientcolorblue"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/rlNotif"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivNotif"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/todo"
+                                app:srcCompat="@drawable/ic_notifications_black_24dp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_alignParentEnd="true"
+                                android:padding="5dp"
+                                android:id="@+id/tvNpNotif"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textFontWeight="100"
+                                android:textSize="8dp"
+                                android:background="@drawable/backgoundovalmerah"
+                                android:layout_marginEnd="5dp"
+                                android:textColor="@color/white"
+                                />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/llPanduan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_panduan"
+                                android:contentDescription="@string/todo"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Panduan"
+                                android:layout_marginStart="3dp"
+                                android:textColor="@color/white"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/imgProfile"
+                        android:layout_margin="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_person_putih"
+                        />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtNama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textColor="@color/putih"
+                            android:textStyle="bold"
+
+                            />
+
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="0.5dp"
+                            android:background="@color/putih" />
+
+                        <TextView
+                            android:id="@+id/txtNIP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/putih"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/txtJabatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/putih"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/txtKantor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/putih"
+
+                            />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tagAbsensi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+
+                        >
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtTgl"
+                            android:textColor="@color/putih"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:paddingStart="10dp"
+                            android:layout_below="@+id/txtTgl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/backgoundovalputih"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="5dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/in"
+                                android:contentDescription="@string/todo" />
+
+                            <TextView
+                                android:id="@+id/tvBarJamMasuk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="@string/timenol"
+                                android:textColor="@color/font" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_below="@+id/txtTgl"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/backgoundovalputih"
+                            android:gravity="center_vertical"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/timenol"
+                                android:textColor="@color/font"
+                                android:padding="5dp"
+                                android:id="@+id/tvBarJamPulang"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/out"
+                                android:contentDescription="@string/todo" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_below="@+id/rrHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:gravity="center"
+
+                        >
+
+
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/kehadiran"
+                            >
+
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:elevation="10dp"
+                                android:outlineAmbientShadowColor="@color/fontbold"
+                                android:outlineSpotShadowColor="@color/fontbold"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/btnkh"
+                                app:shapeAppearance="@style/menu_home" />
+
+                            <View
+                                android:id="@+id/viewKehadiran"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/backgroundnavbar"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                />
+                            <TextView
+                                android:id="@+id/txtKehadiran"
+                                android:visibility="gone"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:text="@string/kehadiran"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/perjalanandinas"
+                            >
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/btnpd"
+                                android:elevation="10dp"
+                                android:outlineAmbientShadowColor="@color/fontbold"
+                                android:outlineSpotShadowColor="@color/fontbold"
+                                app:shapeAppearance="@style/menu_home"
+                                android:textAlignment="center"
+                                />
+
+                            <View
+                                android:id="@+id/viewPerjalananDinas"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/backgroundnavbar"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/txtPerjalananDinas"
+                                android:visibility="gone"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:text="@string/perjalanan_dinas"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:gravity="center"
+                        >
+
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/izin"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:elevation="10dp"
+                                android:outlineAmbientShadowColor="@color/fontbold"
+                                android:outlineSpotShadowColor="@color/fontbold"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/btnizin"
+                                app:shapeAppearance="@style/menu_home" />
+
+                            <View
+                                android:id="@+id/viewIzin"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/backgroundnavbar"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/txtIzin"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:text="@string/izin"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/agenda"
+                            android:gravity="center_horizontal">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/btnagenda"
+                                android:elevation="10dp"
+                                android:outlineAmbientShadowColor="@color/fontbold"
+                                android:outlineSpotShadowColor="@color/fontbold"
+                                app:shapeAppearance="@style/menu_home"
+                                />
+
+                            <View
+                                android:id="@+id/viewAgenda"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/backgroundnavbar"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="10dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/txtAgenda"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:text="@string/agenda"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
